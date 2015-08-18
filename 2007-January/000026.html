@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-issues] [Bug #10110] Formlayout loading saved form(	NB5.0, JDK1.5-1.6, FL2.0.3.1
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-issues/2007-January/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-issues%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-issues%5D%20%5BBug%20%2310110%5D%20Formlayout%20loading%20saved%20form%28%0A%09NB5.0%2C%20JDK1.5-1.6%2C%20FL2.0.3.1&In-Reply-To=%3C200701242339.l0ONdZru019900%40unicorn.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000025.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-issues] [Bug #10110] Formlayout loading saved form(	NB5.0, JDK1.5-1.6, FL2.0.3.1</H1>
+    <B>admin at berlios.de</B> 
+    <A HREF="mailto:nblayoutpack-issues%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-issues%5D%20%5BBug%20%2310110%5D%20Formlayout%20loading%20saved%20form%28%0A%09NB5.0%2C%20JDK1.5-1.6%2C%20FL2.0.3.1&In-Reply-To=%3C200701242339.l0ONdZru019900%40unicorn.berlios.de%3E"
+       TITLE="[nblayoutpack-issues] [Bug #10110] Formlayout loading saved form(	NB5.0, JDK1.5-1.6, FL2.0.3.1">admin at berlios.de
+       </A><BR>
+    <I>Thu Jan 25 00:39:35 CET 2007</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000025.html">[nblayoutpack-issues] [Bug #10110] Formlayout loading saved form(	NB5.0, JDK1.5-1.6, FL2.0.3.1
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#26">[ date ]</a>
+              <a href="thread.html#26">[ thread ]</a>
+              <a href="subject.html#26">[ subject ]</a>
+              <a href="author.html#26">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Bug #10110, was updated on 2007-Jan-24 10:53
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Closed
+Resolution: Wont Fix
+Bug Group: None
+Priority: 5
+Submitted by: mmadzia
+Assigned to : ikysil
+Summary: Formlayout loading saved form( NB5.0, JDK1.5-1.6, FL2.0.3.1
+
+Details: INFORMATIONAL *********** Exception occurred ************ at 9:44 AM on Jan 24, 2007
+java.lang.NullPointerException: The constraints must not be null.
+        at com.jgoodies.forms.layout.FormLayout.addLayoutComponent(FormLayout.java:861)
+        at java.awt.Container.addImpl(Container.java:1068)
+        at java.awt.Container.add(Container.java:395)
+        at org.netbeans.modules.form.layoutsupport.AbstractLayoutSupport.addComponentsToContainer(AbstractLayoutSupport.java:562)
+        at org.netbeans.modules.form.layoutsupport.LayoutSupportManager.updatePrimaryContainer(LayoutSupportManager.java:815)
+[catch] at org.netbeans.modules.form.GandalfPersistenceManager.loadComponent(GandalfPersistenceManager.java:848)
+        at org.netbeans.modules.form.GandalfPersistenceManager.restoreComponent(GandalfPersistenceManager.java:599)
+        at org.netbeans.modules.form.GandalfPersistenceManager.loadComponent(GandalfPersistenceManager.java:722)
+        at org.netbeans.modules.form.GandalfPersistenceManager.loadForm(GandalfPersistenceManager.java:420)
+        at org.netbeans.modules.form.GandalfPersistenceManager.loadForm(GandalfPersistenceManager.java:200)
+        at org.netbeans.modules.form.FormEditor$2.run(FormEditor.java:213)
+        at org.netbeans.modules.form.FormLAF$1.run(FormLAF.java:58)
+        at org.openide.util.Mutex.doEventAccess(Mutex.java:1172)
+        at org.openide.util.Mutex.readAccess(Mutex.java:253)
+        at org.netbeans.modules.form.FormLAF.executeWithLookAndFeel(FormLAF.java:43)
+        at org.netbeans.modules.form.FormEditor.loadFormData(FormEditor.java:211)
+        at org.netbeans.modules.form.FormEditor.loadFormDesigner(FormEditor.java:137)
+        at org.netbeans.modules.form.FormDesigner.componentShowing(FormDesigner.java:1484)
+        at org.netbeans.core.multiview.MultiViewPeer.peerComponentShowing(MultiViewPeer.java:171)
+        at org.netbeans.core.multiview.MultiViewCloneableTopComponent.componentShowing(MultiViewCloneableTopComponent.java:107)
+        at org.openide.windows.WindowManager.componentShowing(WindowManager.java:307)
+        at org.netbeans.core.windows.WindowManagerImpl.componentShowing(WindowManagerImpl.java:944)
+        at org.netbeans.core.windows.view.DefaultView.changeGUI(DefaultView.java:144)
+        at org.netbeans.core.windows.ViewRequestor.dispatchRequest(ViewRequestor.java:238)
+        at org.netbeans.core.windows.ViewRequestor.processVisibilityRequest(ViewRequestor.java:227)
+        at org.netbeans.core.windows.ViewRequestor.postVisibilityRequest(ViewRequestor.java:164)
+        at org.netbeans.core.windows.ViewRequestor.scheduleRequest(ViewRequestor.java:85)
+        at org.netbeans.core.windows.Central.setVisible(Central.java:74)
+        at org.netbeans.core.windows.WindowManagerImpl.setVisible(WindowManagerImpl.java:710)
+        at org.netbeans.core.windows.WindowSystemImpl.show(WindowSystemImpl.java:56)
+        at org.netbeans.core.NonGui$3.run(NonGui.java:223)
+        at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+        at java.awt.EventQueue.dispatchEvent(EventQueue.java:597)
+        at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:273)
+        at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:183)
+        at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:173)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:168)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:160)
+        at java.awt.EventDispatchThread.run(EventDispatchThread.java:121)
+
+
+Follow-Ups:
+
+Date: 2007-Jan-25 01:39
+By: ikysil
+
+Comment:
+NBLayoutPack is not supported in NetBeans 5.0 due to a bug in NetBeans.
+
+I have filed a bug (see
+<A HREF="http://www.netbeans.org/issues/show_bug.cgi?id=71836">http://www.netbeans.org/issues/show_bug.cgi?id=71836</A>) which had been
+fixed in development trunk. I've got the following comment from Tomas
+Pavek (he fixed the bug, BTW) also:
+Now - the fix is easy in NetBeans, but there is no workaround on your
+side&lt;/span&gt;. It's a shame this is broken in 5.0, but it is far too late
+to get the fix into the release. I can only think about creating a patch
+for you, possibly making it available later as hotfix on AU.
+
+I'm going to release NBLayoutPack for NetBeans 5.5 but can't give any promise.
+-------------------------------------------------------
+
+For detailed info, follow this link:
+<A HREF="http://developer.berlios.de/bugs/?func=detailbug&amp;bug_id=10110&amp;group_id=2759">http://developer.berlios.de/bugs/?func=detailbug&amp;bug_id=10110&amp;group_id=2759</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000025.html">[nblayoutpack-issues] [Bug #10110] Formlayout loading saved form(	NB5.0, JDK1.5-1.6, FL2.0.3.1
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#26">[ date ]</a>
+              <a href="thread.html#26">[ thread ]</a>
+              <a href="subject.html#26">[ subject ]</a>
+              <a href="author.html#26">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-issues">More information about the nblayoutpack-issues
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [nblayoutpack-issues] [Bug #5568] Exception when changing to TableLayout
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/nblayoutpack-issues/2005-November/index.html" >
+   <LINK REL="made" HREF="mailto:nblayoutpack-issues%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-issues%5D%20%5BBug%20%235568%5D%20Exception%20when%20changing%20to%20TableLayout&In-Reply-To=%3C200511200700.jAK70ngU026620%40unicorn.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000022.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[nblayoutpack-issues] [Bug #5568] Exception when changing to TableLayout</H1>
+    <B>noreply at berlios.de</B> 
+    <A HREF="mailto:nblayoutpack-issues%40lists.berlios.de?Subject=Re%3A%20%5Bnblayoutpack-issues%5D%20%5BBug%20%235568%5D%20Exception%20when%20changing%20to%20TableLayout&In-Reply-To=%3C200511200700.jAK70ngU026620%40unicorn.berlios.de%3E"
+       TITLE="[nblayoutpack-issues] [Bug #5568] Exception when changing to TableLayout">noreply at berlios.de
+       </A><BR>
+    <I>Sun Nov 20 08:00:49 CET 2005</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000022.html">[nblayoutpack-issues] [Bug #5568] Exception when changing to TableLayout
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#24">[ date ]</a>
+              <a href="thread.html#24">[ thread ]</a>
+              <a href="subject.html#24">[ subject ]</a>
+              <a href="author.html#24">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Bug #5568, was updated on 2005-Nov-07 13:45
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Closed
+Resolution: Fixed
+Bug Group: None
+Priority: 5
+Submitted by: sbglasius
+Assigned to : ikysil
+Summary: Exception when changing to TableLayout
+
+Details: Hi.
+
+I get the following exception, when I try to change my form-layout to TableLayout:
+
+java.lang.AssertionError: Parameter cannot be null
+        at org.netbeans.modules.java.j2seproject.classpath.J2SEProjectClassPathExtender.addLibrary(J2SEProjectClassPathExtender.java:67)
+        at org.netbeans.modules.java.j2seproject.classpath.J2SEProjectClassPathExtender.addLibrary(J2SEProjectClassPathExtender.java:63)
+        at org.netbeans.modules.form.project.ClassPathUtils.updateProject(ClassPathUtils.java:227)
+        at org.netbeans.modules.form.MetaComponentCreator.prepareClass(MetaComponentCreator.java:1155)
+        at org.netbeans.modules.form.MetaComponentCreator.createComponent(MetaComponentCreator.java:79)
+        at org.netbeans.modules.form.actions.SelectLayoutAction$LayoutActionListener.actionPerformed(SelectLayoutAction.java:209)
+        at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:1849)
+        at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2169)
+        at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:420)
+        at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:258)
+        at javax.swing.AbstractButton.doClick(AbstractButton.java:302)
+        at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:1000)
+        at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:1041)
+        at java.awt.Component.processMouseEvent(Component.java:5488)
+        at javax.swing.JComponent.processMouseEvent(JComponent.java:3093)
+        at java.awt.Component.processEvent(Component.java:5253)
+        at java.awt.Container.processEvent(Container.java:1966)
+        at java.awt.Component.dispatchEventImpl(Component.java:3955)
+        at java.awt.Container.dispatchEventImpl(Container.java:2024)
+        at java.awt.Component.dispatchEvent(Component.java:3803)
+        at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4212)
+        at java.awt.LightweightDispatcher.processMouseEvent(Container.java:3892)
+        at java.awt.LightweightDispatcher.dispatchEvent(Container.java:3822)
+        at java.awt.Container.dispatchEventImpl(Container.java:2010)
+        at java.awt.Window.dispatchEventImpl(Window.java:1774)
+        at java.awt.Component.dispatchEvent(Component.java:3803)
+        at java.awt.EventQueue.dispatchEvent(EventQueue.java:463)
+[catch] at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:242)
+        at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+        at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+
+I've tried both with the distributed nbm package and with the source package build from scratch.
+
+I'm using NetBeans 5.0 Beta and my startup parameters are as follows:
+
+  Product Version       = NetBeans IDE 5.0 Beta (Build 200509261930)
+  Operating System      = Windows XP version 5.1 running on x86
+  Java; VM; Vendor      = 1.5.0_03; Java HotSpot(TM) Client VM 1.5.0_03-b07; Sun Microsystems Inc.
+  Java Home             = D:\development\tools\jdk1.5.0_03\jre
+  System Locale; Encod. = da_DK (nb); Cp1252
+  Home Dir; Current Dir = C:\Documents and Settings\myhome; D:\development\source\nblayoutpack\nb5.0\nblayoutpack
+  IDE Install; User Dir = D:\development\tools\netbeans-5.0beta\platform6; D:\development\source\nblayoutpack\nb5.0\nblayoutpack\build\testuserdir
+  CLASSPATH             = D:\development\tools\netbeans-5.0beta\platform6\lib\boot.jar;D:\development\tools\netbeans-5.0beta\platform6\lib\org-openide-modules.jar;D:\development\tools\netbeans-5.0beta\platform6\lib\org-openide-util.jar;D:\development\tools\jdk1.5.0_03\lib\dt.jar;D:\development\tools\jdk1.5.0_03\lib\tools.jar
+  Boot &amp; ext classpath  = D:\development\tools\jdk1.5.0_03\jre\lib\rt.jar;D:\development\tools\jdk1.5.0_03\jre\lib\i18n.jar;D:\development\tools\jdk1.5.0_03\jre\lib\sunrsasign.jar;D:\development\tools\jdk1.5.0_03\jre\lib\jsse.jar;D:\development\tools\jdk1.5.0_03\jre\lib\jce.jar;D:\development\tools\jdk1.5.0_03\jre\lib\charsets.jar;D:\development\tools\jdk1.5.0_03\jre\classes;D:\development\tools\jdk1.5.0_03\jre\lib\ext\dnsns.jar;D:\development\tools\jdk1.5.0_03\jre\lib\ext\localedata.jar;D:\development\tools\jdk1.5.0_03\jre\lib\ext\sunjce_provider.jar;D:\development\tools\jdk1.5.0_03\jre\lib\ext\sunpkcs11.jar
+  Dynamic classpath     = D:\development\tools\netbeans-5.0beta\platform6\core\core.jar;D:\development\tools\netbeans-5.0beta\platform6\core\org-openide-filesystems.jar;D:\development\tools\netbeans-5.0beta\platform6\core\updater.jar;D:\development\tools\netbeans-5.0beta\nb5.0\core\org-netbeans-upgrader.jar;D:\development\tools\netbeans-5.0beta\nb5.0\core\locale\core_nb.jar;D:\development\tools\netbeans-5.0beta\nb5.0\core\locale\updater_nb.jar;D:\development\tools\netbeans-5.0beta\ide6\core\org-netbeans-modules-utilities-cli.jar
+-------------------------------------------------------------------------------
+
+Best regards,
+
+S&#248;ren Berg Glasius
+
+Follow-Ups:
+
+Date: 2005-Nov-20 09:00
+By: ikysil
+
+Comment:
+Seems to be fixed - works with NB 5.0 beta 2 too.
+-------------------------------------------------------
+
+Date: 2005-Nov-08 11:07
+By: ikysil
+
+Comment:
+Yes, the bug is reproducable. I'm not sure if it's a bug in nblayoutpack rather than in NetBeans itself though. I'll discuss it with NB guys.
+
+There is a workaround: add a Table Layout library to your project BEFORE switching layout using project properties dialog.
+-------------------------------------------------------
+
+For detailed info, follow this link:
+<A HREF="http://developer.berlios.de/bugs/?func=detailbug&amp;bug_id=5568&amp;group_id=2759">http://developer.berlios.de/bugs/?func=detailbug&amp;bug_id=5568&amp;group_id=2759</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000022.html">[nblayoutpack-issues] [Bug #5568] Exception when changing to TableLayout
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#24">[ date ]</a>
+              <a href="thread.html#24">[ thread ]</a>
+              <a href="subject.html#24">[ subject ]</a>
+              <a href="author.html#24">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/nblayoutpack-issues">More information about the nblayoutpack-issues
+mailing list</a><br>
+</body></html>

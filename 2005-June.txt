@@ -1,0 +1,192 @@
+From noreply at berlios.de  Tue Jun  7 21:54:30 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Tue, 7 Jun 2005 11:54:30 -0800 (AKDT)
+Subject: [nblayoutpack-issues] [Bug #4210] FormLayout - GridX and GridY can't change
+Message-ID: <200506071954.j57JsUOD016203@unicorn.berlios.de>
+
+Bug #4210, was updated on 2005-Jun-07 11:54
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: kushal
+Assigned to : none
+Summary: FormLayout - GridX and GridY can't change
+
+Details: NB 4.1
+JVM: 1.5.0_01
+OS: Win2k
+
+When i create a formlayout and add components, all have a GridX and GridY that are the same.  I setup a 2x2 grid where Columns=p,p amd Rows=p,p.  Every GridX and GridY is set to 2, so all components sit on top of each other.
+
+I cannot change the values of GridX nor GridY, either (if i try, the GUI immediately sets the value back to 2).
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4210&group_id=2759
+
+
+From noreply at berlios.de  Tue Jun  7 21:58:41 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Tue, 7 Jun 2005 11:58:41 -0800 (AKDT)
+Subject: [nblayoutpack-issues] [Bug #4210] FormLayout - GridX and GridY can't change
+Message-ID: <200506071958.j57JwfKV016403@unicorn.berlios.de>
+
+Bug #4210, was updated on 2005-Jun-07 11:54
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: kushal
+Assigned to : none
+Summary: FormLayout - GridX and GridY can't change
+
+Details: NB 4.1
+JVM: 1.5.0_01
+OS: Win2k
+
+When i create a formlayout and add components, all have a GridX and GridY that are the same.  I setup a 2x2 grid where Columns=p,p amd Rows=p,p.  Every GridX and GridY is set to 2, so all components sit on top of each other.
+
+I cannot change the values of GridX nor GridY, either (if i try, the GUI immediately sets the value back to 2).
+
+Follow-Ups:
+
+Date: 2005-Jun-07 11:58
+By: kushal
+
+Comment:
+Also forgot to mention I'm using:
+
+nblayoutpack-formlayout-nb4.1-2.0.0.20050526.0031.nbm
+and forms-1.0.5.jar
+-------------------------------------------------------
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4210&group_id=2759
+
+
+From noreply at berlios.de  Sat Jun 25 16:51:39 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Sat, 25 Jun 2005 17:51:39 +0300 (EEST)
+Subject: [nblayoutpack-issues] [Bug #4210] FormLayout - GridX and GridY can't change
+Message-ID: <200506251451.j5PEpdjL015295@unicorn.berlios.de>
+
+Bug #4210, was updated on 2005-Jun-07 22:54
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: kushal
+Assigned to : ikysil
+Summary: FormLayout - GridX and GridY can't change
+
+Details: NB 4.1
+JVM: 1.5.0_01
+OS: Win2k
+
+When i create a formlayout and add components, all have a GridX and GridY that are the same.  I setup a 2x2 grid where Columns=p,p amd Rows=p,p.  Every GridX and GridY is set to 2, so all components sit on top of each other.
+
+I cannot change the values of GridX nor GridY, either (if i try, the GUI immediately sets the value back to 2).
+
+Follow-Ups:
+
+Date: 2005-Jun-07 22:58
+By: kushal
+
+Comment:
+Also forgot to mention I'm using:
+
+nblayoutpack-formlayout-nb4.1-2.0.0.20050526.0031.nbm
+and forms-1.0.5.jar
+-------------------------------------------------------
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4210&group_id=2759
+
+
+From noreply at berlios.de  Sat Jun 25 18:34:06 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Sat, 25 Jun 2005 19:34:06 +0300 (EEST)
+Subject: [nblayoutpack-issues] [Bug #4210] FormLayout - GridX and GridY can't change
+Message-ID: <200506251634.j5PGY6iU018036@unicorn.berlios.de>
+
+Bug #4210, was updated on 2005-Jun-07 22:54
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: kushal
+Assigned to : ikysil
+Summary: FormLayout - GridX and GridY can't change
+
+Details: NB 4.1
+JVM: 1.5.0_01
+OS: Win2k
+
+When i create a formlayout and add components, all have a GridX and GridY that are the same.  I setup a 2x2 grid where Columns=p,p amd Rows=p,p.  Every GridX and GridY is set to 2, so all components sit on top of each other.
+
+I cannot change the values of GridX nor GridY, either (if i try, the GUI immediately sets the value back to 2).
+
+Follow-Ups:
+
+Date: 2005-Jun-25 19:34
+By: ikysil
+
+Comment:
+Please, check with 3 columns. I've reproduced the bug only if I needed to change the value to become 1, but it worked OK if I needed to change the value to become 2, 3, etc.
+-------------------------------------------------------
+
+Date: 2005-Jun-07 22:58
+By: kushal
+
+Comment:
+Also forgot to mention I'm using:
+
+nblayoutpack-formlayout-nb4.1-2.0.0.20050526.0031.nbm
+and forms-1.0.5.jar
+-------------------------------------------------------
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4210&group_id=2759
+
+
+From noreply at berlios.de  Tue Jun 28 20:36:37 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Tue, 28 Jun 2005 21:36:37 +0300 (EEST)
+Subject: [nblayoutpack-issues] [Bug #4398] Big icon in Palette is incorrect
+Message-ID: <200506281836.j5SIab06018282@unicorn.berlios.de>
+
+Bug #4398, was updated on 2005-Jun-28 21:36
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 3
+Submitted by: ikysil
+Assigned to : ikysil
+Summary: Big icon in Palette is incorrect
+
+Details: Big icon (32x32) in Palette is incorrect (FormLayout and TableLayout both).
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4398&group_id=2759
+
+

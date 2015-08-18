@@ -1,0 +1,51 @@
+From noreply at berlios.de  Mon Feb 28 12:22:36 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Mon, 28 Feb 2005 12:22:36 +0100 (CET)
+Subject: [nblayoutpack-issues] [Bug #3485] error in code
+Message-ID: <200502281122.j1SBMav4011379@unicorn.berlios.de>
+
+Bug #3485, was updated on 2005-Feb-28 12:22
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Open
+Resolution: None
+Bug Group: None
+Priority: 5
+Submitted by: none
+Assigned to : none
+Summary: error in code
+
+Details: INFORMATIONAL *********** Exception occurred ************ at 12:30 PM on Feb 28, 2005
+java.lang.IllegalStateException: The data object MultiFileObject at 55a0da[nbfs://nbhost/SystemFileSystem/Palette/Layouts/FormLayout.palette_item] is invalid; you may not call getNodeDelegate on it any more; see #17020 and please fix your code
+[catch] at org.openide.loaders.DataObject.getNodeDelegate(DataObject.java:238)
+        at org.netbeans.modules.form.palette.PaletteItem.getNode(PaletteItem.java:74)
+        at org.netbeans.modules.form.actions.SelectLayoutAction$LayoutMenu.getPopupMenu(SelectLayoutAction.java:131)
+        at javax.swing.plaf.basic.BasicMenuUI$Handler.mouseEntered(BasicMenuUI.java:498)
+        at java.awt.Component.processMouseEvent(Component.java:5497)
+        at javax.swing.JComponent.processMouseEvent(JComponent.java:3093)
+        at java.awt.Component.processEvent(Component.java:5253)
+        at java.awt.Container.processEvent(Container.java:1966)
+        at java.awt.Component.dispatchEventImpl(Component.java:3955)
+        at java.awt.Container.dispatchEventImpl(Container.java:2024)
+        at java.awt.Component.dispatchEvent(Component.java:3803)
+        at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4212)
+        at java.awt.LightweightDispatcher.trackMouseEnterExit(Container.java:4017)
+        at java.awt.LightweightDispatcher.processMouseEvent(Container.java:3874)
+        at java.awt.LightweightDispatcher.dispatchEvent(Container.java:3822)
+        at java.awt.Container.dispatchEventImpl(Container.java:2010)
+        at java.awt.Window.dispatchEventImpl(Window.java:1766)
+        at java.awt.Component.dispatchEvent(Component.java:3803)
+        at java.awt.EventQueue.dispatchEvent(EventQueue.java:463)
+        at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:234)
+        at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:163)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:157)
+        at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:149)
+        at java.awt.EventDispatchThread.run(EventDispatchThread.java:110)
+
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=3485&group_id=2759
+
+

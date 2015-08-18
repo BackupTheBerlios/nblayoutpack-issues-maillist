@@ -1,0 +1,75 @@
+From noreply at berlios.de  Fri Aug  5 23:11:48 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Sat, 6 Aug 2005 00:11:48 +0300 (EEST)
+Subject: [nblayoutpack-issues] [Bug #4398] Big icon in Palette is incorrect
+Message-ID: <200508052111.j75LBmTb012622@unicorn.berlios.de>
+
+Bug #4398, was updated on 2005-Jun-28 21:36
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Closed
+Resolution: Fixed
+Bug Group: None
+Priority: 3
+Submitted by: ikysil
+Assigned to : ikysil
+Summary: Big icon in Palette is incorrect
+
+Details: Big icon (32x32) in Palette is incorrect (FormLayout and TableLayout both).
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4398&group_id=2759
+
+
+From noreply at berlios.de  Fri Aug  5 23:11:56 2005
+From: noreply at berlios.de (noreply at berlios.de)
+Date: Sat, 6 Aug 2005 00:11:56 +0300 (EEST)
+Subject: [nblayoutpack-issues] [Bug #4210] FormLayout - GridX and GridY can't change
+Message-ID: <200508052111.j75LBubF012633@unicorn.berlios.de>
+
+Bug #4210, was updated on 2005-Jun-07 22:54
+Here is a current snapshot of the bug.
+
+Project: Layout Manager Pack for NB
+Category: None
+Status: Closed
+Resolution: Fixed
+Bug Group: None
+Priority: 5
+Submitted by: kushal
+Assigned to : ikysil
+Summary: FormLayout - GridX and GridY can't change
+
+Details: NB 4.1
+JVM: 1.5.0_01
+OS: Win2k
+
+When i create a formlayout and add components, all have a GridX and GridY that are the same.  I setup a 2x2 grid where Columns=p,p amd Rows=p,p.  Every GridX and GridY is set to 2, so all components sit on top of each other.
+
+I cannot change the values of GridX nor GridY, either (if i try, the GUI immediately sets the value back to 2).
+
+Follow-Ups:
+
+Date: 2005-Jun-25 19:34
+By: ikysil
+
+Comment:
+Please, check with 3 columns. I've reproduced the bug only if I needed to change the value to become 1, but it worked OK if I needed to change the value to become 2, 3, etc.
+-------------------------------------------------------
+
+Date: 2005-Jun-07 22:58
+By: kushal
+
+Comment:
+Also forgot to mention I'm using:
+
+nblayoutpack-formlayout-nb4.1-2.0.0.20050526.0031.nbm
+and forms-1.0.5.jar
+-------------------------------------------------------
+
+For detailed info, follow this link:
+http://developer.berlios.de/bugs/?func=detailbug&bug_id=4210&group_id=2759
+
+
